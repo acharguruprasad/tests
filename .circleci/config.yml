@@ -14,3 +14,6 @@ jobs:
       - run:
           name: Check date
           command: date
+      - run:
+          name: Check Time
+          command: time
