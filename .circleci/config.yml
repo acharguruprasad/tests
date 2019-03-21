@@ -12,5 +12,5 @@ jobs:
           name: Curl a page
           command: curl https://www.google.com
       - run:
-          name: Ping to remote IP
-          command: ping 10.20.1.2
+          name: Dig to remote IP
+          command: dig 10.20.1.2
