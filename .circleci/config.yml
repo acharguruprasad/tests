@@ -24,7 +24,8 @@ jobs:
           command: time
 workflows:
   version: 2
-  one_and_two:
-    jobs:
-      - one
-      - two
+  sequential_jobs:
+    - one
+    - two
+      requires:
+        - one
