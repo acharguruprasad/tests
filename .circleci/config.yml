@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build1:
+  one:
     docker:
       - image: circleci/ruby:2.4.1-node-browsers
     steps:
@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Curl a page
           command: curl https://www.google.com
-  build2:
+  two:
     docker:
       - image: circleci/ruby:2.4.1-node-browsers
     steps:
@@ -22,3 +22,9 @@ jobs:
       - run:
           name: Check Time
           command: time
+workflows:
+  version: 2
+  one_and_two:
+    jobs:
+      - one
+      - two
