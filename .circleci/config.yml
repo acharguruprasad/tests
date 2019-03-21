@@ -16,4 +16,4 @@ jobs:
           command: date
       - run:
           name: Check Time
-          command: time
+          command: time-class
