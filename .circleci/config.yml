@@ -11,6 +11,11 @@ jobs:
       - run:
           name: Curl a page
           command: curl https://www.google.com
+  build:
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
+    steps:
+      - checkout
       - run:
           name: Check date
           command: date
