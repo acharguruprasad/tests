@@ -6,6 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Run sample test
+          name: Run Hello test
           command: echo "Hello Everyone"
-      
+      - run:
+          name: Curl a page
+          command: curl https://www.google.com
