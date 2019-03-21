@@ -1,9 +1,11 @@
 version: 2
 jobs:
   build:
-    docker
-      - image: circleci/ruby:2.4.1
+    docker:
+      - image: circleci/ruby:2.4.1-node-browsers
     steps:
       - checkout
-      - run echo "Om Sri Sai Ram"
+      - run:
+          name: Run sample test
+          command: echo "Hello Everyone"
       
