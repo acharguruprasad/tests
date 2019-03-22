@@ -1,30 +1,10 @@
 version: 2
 jobs:
-  one:
+  build:
     docker:
       - image: circleci/ruby:2.4.1-node-browsers
     steps:
       - checkout
-      - run:
-          name: Run Hello test
-          command: echo "Hello Everyone"
-      - run:
-          name: Curl a page
-          command: curl https://www.google.com
-  two:
-    docker:
-      - image: circleci/ruby:2.4.1-node-browsers
-    steps:
-      - checkout
-      - run:
-          name: Check date
-          command: date
-      - run:
-          name: Check Time
-          command: time
-workflows:
-  version: 2
-  sequential_jobs:
-    jobs:
-      - one
-      - two
+      - run: 
+          name: Hello
+          command: echo "Hello Team"
