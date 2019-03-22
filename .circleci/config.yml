@@ -27,6 +27,6 @@ workflows:
   sequential_jobs:
     jobs:
       - one
-      - two
+      - two:
         requires:
           - one
