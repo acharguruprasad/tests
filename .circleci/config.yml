@@ -6,5 +6,5 @@ jobs:
     steps:
       - checkout
       - run: 
-          name: Hello
-          command: echo "Hello Team"
+          name: Check IP
+          command: dig 10.2.10.21
